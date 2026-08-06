@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: melo-alves-tax-governance
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: DATABASE_PATH
+        value: /app/data/melo_alves.db
+      - key: UPLOAD_DIR
+        value: /app/data/uploads
+      - key: ADMIN_PASSWORD
+        generateValue: true
